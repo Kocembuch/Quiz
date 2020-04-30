@@ -44,8 +44,8 @@ button {
 
 .answerGeneral, .answerGeneral2, .answerGeneral3 {
     position: absolute;
-    left: 60vw;
-    top: 30vw;
+    left: 40vw;
+    bottom: 70vh;
 }
 
 /* Finish */
