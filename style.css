@@ -1,0 +1,61 @@
+body {
+    font-family: 'Raleway';
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    border: 2px solid teal;
+}
+
+#welcome {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.pytanie1, .pytanie2, .pytanie3 {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    font-family: 'Indie Flower';
+  }
+
+  /* Answer types */
+
+.answerGeneral, .answerGeneral2, .answerGeneral3 {
+    position: absolute;
+    left: 60vw;
+    top: 30vw;
+}
+
+/* Finish */
+
+.finish {
+    display: none;
+}
+
+.end {
+    font-family: 'Indie Flower';
+    font-size: 30px;
+}
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <title>QUIZ</title>
+</head>
+<body>
+<div id="introduction">
+    <h1>Podaj swoje imię:</h1>
+    <form action="">
+    <input type="text">
+    <button>OK</button>
+    </form>
+    <h2>
+    <div id="welcome"></div>
+</h2>
+</div>
+
+    <!-- PYTANIE 1 -->
+<div class="pytanie1">
+    <h1>Jakie miasto jest stolicą Wenezueli</h1>
+    <label  class="container">
+        <input type="radio" name="ans" id="one">Caracas
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <label class="container">
+        <input type="radio" name="ans">Bogota
+        <!-- <span class="checkmark"></span> -->
+    </label>
+        <label class="container">
+        <input type="radio" name="ans">Lima
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <label class="container">
+        <input type="radio" name="ans">Buenos Aires
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <button class="check">SPRAWDŹ</button>
+    <button class="next">NASTĘPNE</button>
+    <h2>
+        <div class="answerGeneral"></div>
+    </h2> 
+    
+</div>
+
+<!-- PYTANIE 2 -->
+<div class="pytanie2">
+    <h1>Które zwierze nie jest torbaczem</h1>
+    <label  class="container">
+        <input type="radio" name="ans">Kangur
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <label class="container">
+        <input type="radio" name="ans">Mrówkożer
+        <!-- <span class="checkmark"></span> -->
+    </label>
+        <label class="container">
+        <input type="radio" name="ans" id="three">Mrówkojad
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <label class="container">
+        <input type="radio" name="ans">Dydelf
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <button class="check2">SPRAWDŹ</button>
+    <button class="next2">NASTĘPNE</button>
+    <h2>
+        <div class="answerGeneral2"></div>
+    </h2> 
+    
+</div>
+
+<!-- PYTANIE 3 -->
+<div class="pytanie3">
+    <h1>Najwyższy szczyt Ameryki Południowej to</h1>
+    <label  class="container">
+        <input type="radio" name="ans">Denali
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <label class="container">
+        <input type="radio" name="ans" id="two">Aconcagua
+        <!-- <span class="checkmark"></span> -->
+    </label>
+        <label class="container">
+        <input type="radio" name="ans">Mont Blanc
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <label class="container">
+        <input type="radio" name="ans">Mount Everest
+        <!-- <span class="checkmark"></span> -->
+    </label>
+    <button class="check3">SPRAWDŹ</button>
+    <button class="next3">ZAKOŃCZ</button>
+    <h2>
+        <div class="answerGeneral3"></div>
+    </h2> 
+    
+</div>
+
+<!-- ZAKOŃCZENIE -->
+<div class="finish">
+    <h1>Gratuluję ukończenia quizu</h1>
+    <div class="end">   
+        Twój wynik to <h2 class="score">punkty</h2>
+    </div>
+    
+</div>
+<script src="main.js"></script>    
+</body>
+</html>
