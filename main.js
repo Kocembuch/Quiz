@@ -1,5 +1,5 @@
 const btn = document.querySelector("button");
-const div= document.querySelector("div");
+const div = document.querySelector("div");
 const welcome = document.querySelector("#welcome");
 const input = document.querySelector("input");
 const form = document.querySelector("form")
@@ -39,59 +39,62 @@ const goToEnd = () => {
 
 function tryAgain3() {
     answerGeneral3.textContent = "Najpierw odpowiedz poprawnie";
+    answerGeneral3.classList.add("active");
 }
 
 const checkAnswerAgain3 = () => {
     if (answerTwo.checked) {
-         
+
         console.log('DOBRA ODPOWIEDŹ');
         answerGeneral3.textContent = "Dobra odpowiedź :)";
-           
+        answerGeneral3.classList.add("active");
+
         btnNext3.addEventListener("click", goToEnd);
         btnCheck3.classList.add("hide");
         btnNoScore3.classList.add("hide");
-        
-    }
-        else if (!answerTwo.checked) {
-            answerGeneral3.textContent = "Spróbuj jeszcze raz :(";
-            console.log('ZŁA ODPOWIEDŹ');
 
-            btnCheck3.classList.add("hide");
-            btnNoScore3.classList.remove("noScore");
-           
-            btnNext3.addEventListener("click", tryAgain);
-        }
-   
+    } else if (!answerTwo.checked) {
+        answerGeneral3.textContent = "Spróbuj jeszcze raz :(";
+        answerGeneral3.classList.add("active");
+        console.log('ZŁA ODPOWIEDŹ');
+
+        btnCheck3.classList.add("hide");
+        btnNoScore3.classList.remove("noScore");
+
+        btnNext3.addEventListener("click", tryAgain);
+    }
+
 }
 
 
 const checkAnswer3 = () => {
     // alert("drugie pytanie");
-    
-        if (answerTwo.checked) {
-             
-            console.log('DOBRA ODPOWIEDŹ');
-            answerGeneral3.textContent = "Dobra odpowiedź :)";
-            score ++;
-            console.log(`Wynik to : ${score}`);
-           
-            btnNext3.addEventListener("click", goToEnd);
-            btnCheck3.classList.add("hide");
-            
-        }
-            else if (!answerTwo.checked) {
-                answerGeneral3.textContent = "Spróbuj jeszcze raz :(";
-                console.log('ZŁA ODPOWIEDŹ');
-    
-                btnCheck3.classList.add("hide");
-                btnNoScore3.classList.remove("hide");
-    
-                btnNoScore3.addEventListener("click", checkAnswerAgain3);
-                
-                btnNext3.addEventListener("click", tryAgain3);
-            }
-       
+
+    if (answerTwo.checked) {
+
+        console.log('DOBRA ODPOWIEDŹ');
+        answerGeneral3.textContent = "Dobra odpowiedź :)";
+        answerGeneral3.classList.add("active");
+        score++;
+        console.log(`Wynik to : ${score}`);
+
+        btnNext3.addEventListener("click", goToEnd);
+        btnCheck3.classList.add("hide");
+
+    } else if (!answerTwo.checked) {
+        answerGeneral3.textContent = "Spróbuj jeszcze raz :(";
+        answerGeneral3.classList.add("active");
+        console.log('ZŁA ODPOWIEDŹ');
+
+        btnCheck3.classList.add("hide");
+        btnNoScore3.classList.remove("hide");
+
+        btnNoScore3.addEventListener("click", checkAnswerAgain3);
+
+        btnNext3.addEventListener("click", tryAgain3);
     }
+
+}
 
 const goToQuestion3 = () => {
     console.log('PYTANIE 3 DLA CIEBIE');
@@ -104,60 +107,63 @@ const goToQuestion3 = () => {
 
 function tryAgain2() {
     answerGeneral2.textContent = "Najpierw odpowiedz poprawnie";
+    answerGeneral2.classList.add("active");
 }
 
 const checkAnswerAgain2 = () => {
     if (answerThree.checked) {
-         
+
         console.log('DOBRA ODPOWIEDŹ');
         answerGeneral2.textContent = "Dobra odpowiedź :)";
-           
+        answerGeneral2.classList.add("active");
+
         btnNext2.addEventListener("click", goToQuestion3);
         btnCheck2.classList.add("hide");
         btnNoScore2.classList.add("hide");
-        
+
+    } else if (!answerThree.checked) {
+        answerGeneral2.textContent = "Spróbuj jeszcze raz :(";
+        answerGeneral2.classList.add("active");
+        console.log('ZŁA ODPOWIEDŹ');
+
+        btnCheck2.classList.add("hide");
+        btnNoScore2.classList.remove("noScore");
+
+        btnNoScore2.addEventListener("click", checkAnswerAgain);
+
+        btnNext2.addEventListener("click", tryAgain);
     }
-        else if (!answerThree.checked) {
-            answerGeneral2.textContent = "Spróbuj jeszcze raz :(";
-            console.log('ZŁA ODPOWIEDŹ');
 
-            btnCheck2.classList.add("hide");
-            btnNoScore2.classList.remove("noScore");
-
-            btnNoScore2.addEventListener("click", checkAnswerAgain);
-           
-            btnNext2.addEventListener("click", tryAgain);
-        }
-   
 }
 
 
 const checkAnswer2 = () => {
-// alert("drugie pytanie");
+    // alert("drugie pytanie");
 
     if (answerThree.checked) {
-         
+
         console.log('DOBRA ODPOWIEDŹ');
         answerGeneral2.textContent = "Dobra odpowiedź :)";
-        score ++;
+        answerGeneral2.classList.add("active");
+        score++;
         console.log(`Wynik to : ${score}`);
-       
+
         btnNext2.addEventListener("click", goToQuestion3);
         btnCheck2.classList.add("hide");
-        
+
+    } else if (!answerThree.checked) {
+        answerGeneral2.textContent = "Spróbuj jeszcze raz :(";
+        answerGeneral2.classList.add("active");
+        console.log('ZŁA ODPOWIEDŹ');
+
+        btnCheck2.classList.add("hide");
+        btnNoScore2.classList.remove("hide");
+
+        btnNoScore2.addEventListener("click", checkAnswerAgain2);
+
+        btnNext2.addEventListener("click", tryAgain2);
     }
-        else if (!answerThree.checked) {
-            answerGeneral2.textContent = "Spróbuj jeszcze raz :(";
-            console.log('ZŁA ODPOWIEDŹ');
 
-            btnCheck2.classList.add("hide");
-            btnNoScore2.classList.remove("hide");
-
-            btnNoScore2.addEventListener("click", checkAnswerAgain2);
-
-            btnNext2.addEventListener("click", tryAgain2);
-        }
-   
 }
 
 const goToQuestion2 = () => {
@@ -171,33 +177,35 @@ const goToQuestion2 = () => {
 
 const tryAgain = () => {
     answerGeneral.textContent = "Najpierw odpowiedz poprawnie";
+    answerGeneral.classList.add("active");
 }
 
 
 const checkAnswerAgain = () => {
     if (answerOne.checked) {
-         
+
         console.log('DOBRA ODPOWIEDŹ');
         answerGeneral.textContent = "Dobra odpowiedź :)";
-           
+        answerGeneral.classList.add("active");
+
         btnNext.addEventListener("click", goToQuestion2);
         btnCheck.classList.add("hide");
 
         btnNoScore.classList.add("hide");
-        
+
+    } else if (!answerOne.checked) {
+        answerGeneral.textContent = "Spróbuj jeszcze raz :(";
+        answerGeneral.classList.add("active");
+        console.log('ZŁA ODPOWIEDŹ');
+
+        btnCheck.classList.add("hide");
+        btnNoScore.classList.remove("noScore");
+
+        btnNoScore.addEventListener("click", checkAnswerAgain);
+
+        btnNext.addEventListener("click", tryAgain);
     }
-        else if (!answerOne.checked) {
-            answerGeneral.textContent = "Spróbuj jeszcze raz :(";
-            console.log('ZŁA ODPOWIEDŹ');
 
-            btnCheck.classList.add("hide");
-            btnNoScore.classList.remove("noScore");
-
-            btnNoScore.addEventListener("click", checkAnswerAgain);
-           
-            btnNext.addEventListener("click", tryAgain);
-        }
-   
 }
 
 
@@ -205,28 +213,30 @@ const checkAnswerAgain = () => {
 
 const checkAnswer = () => {
     if (answerOne.checked) {
-         
+
         console.log('DOBRA ODPOWIEDŹ');
+        answerGeneral.classList.add("active");
         answerGeneral.textContent = "Dobra odpowiedź :)";
-        score ++;
+
+        score++;
         console.log(`Wynik to : ${score}`);
-       
+
         btnNext.addEventListener("click", goToQuestion2);
         btnCheck.classList.add("hide");
-        
+
+    } else if (!answerOne.checked) {
+        answerGeneral.classList.add("active");
+        answerGeneral.textContent = "Spróbuj jeszcze raz :(";
+        console.log('ZŁA ODPOWIEDŹ');
+
+        btnCheck.classList.add("hide");
+        btnNoScore.classList.remove("noScore");
+
+        btnNoScore.addEventListener("click", checkAnswerAgain);
+
+        btnNext.addEventListener("click", tryAgain);
     }
-        else if (!answerOne.checked) {
-            answerGeneral.textContent = "Spróbuj jeszcze raz :(";
-            console.log('ZŁA ODPOWIEDŹ');
 
-            btnCheck.classList.add("hide");
-            btnNoScore.classList.remove("noScore");
-
-            btnNoScore.addEventListener("click", checkAnswerAgain);
-           
-            btnNext.addEventListener("click", tryAgain);
-        }
-   
 }
 
 const startQuiz = () => {
@@ -244,8 +254,8 @@ const addName = (e) => {
         alert("Podaj imię");
     }
     console.log(name);
-    
-    welcome.innerHTML = `Witaj ${name} <br><br>
+
+    welcome.innerHTML = `Witaj <u><i>${name}</i></u> <br><br>
     <button id="begin">Zaczynamy</button>`
     // style.fontSize = "50px";
     // div.querySelector("e.value").style.fontSize = "50px";
@@ -255,7 +265,7 @@ const addName = (e) => {
     let btnStart = welcome.querySelector("button");
 
     btnStart.addEventListener("click", startQuiz)
-  
+
 }
 
 form.addEventListener("submit", addName)
